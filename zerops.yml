@@ -1,7 +1,8 @@
 app:
   build:
-    base: [ nodejs@14 ]
+    base: [ nodejs@12 ]
     build:
+      - node --version
       - npm i  --loglevel=error
       - npm run build --prod --loglevel=error
     deploy: [ 'dist/~' ]
